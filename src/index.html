@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script type="module" src="./scripts/main.js"></script>
+  </head>
+  <body>
+    <!--SVG_SPRITE-->
+    {{> header}}
+
+    <main>
+      <h1>Home page</h1>
+
+      {{> button text="Submit" type="submit" class="btn--primary"}}
+      {{> button text="Cancel" type="button" class="btn--secondary"}}
+
+      {{> input label="Email" type="email" name="email" placeholder="you@example.com"}}
+      {{> input label="Password" type="password" name="password" placeholder="••••••••"}}
+
+      <p>Icons:</p>
+      {{> icon name="search" width="24" height="24"}}
+      {{> icon name="arrow-right" width="24" height="24"}}
+      {{> icon name="close" width="24" height="24"}}
+    </main>
+  </body>
+</html>
