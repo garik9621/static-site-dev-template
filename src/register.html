@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth</title>
+    <script type="module" src="./scripts/register.js"></script>
+  </head>
+  <body>
+    <!--SVG_SPRITE-->
+    {{> header}}
+
+    <main>
+      <div class="tabs js-tabs">
+        <div class="tabs__nav">
+          <button class="tabs__tab is-active" type="button" data-tab="login">Login</button>
+          <button class="tabs__tab" type="button" data-tab="register">Register</button>
+        </div>
+
+        <div class="tabs__panels">
+          <div class="tabs__panel is-active" data-panel="login">
+            <form class="form js-login-form" novalidate>
+              {{> input type="email" name="email" placeholder="Email" error=""}}
+              {{> input type="password" name="password" placeholder="Password" error=""}}
+
+              <div class="form__actions">
+                {{> button text="Sign in" type="submit" class="btn--primary"}}
+              </div>
+            </form>
+          </div>
+
+          <div class="tabs__panel" data-panel="register">
+            <form class="form js-register-form" novalidate>
+              {{> input type="email" name="email" placeholder="Email" error=""}}
+              {{> input type="tel" name="phone" placeholder="+7 (___) ___-__-__" error=""}}
+              {{> input type="password" name="password" placeholder="Password (min. 6 characters)" error=""}}
+
+              <div class="form__actions">
+                {{> button text="Sign up" type="submit" class="btn--primary"}}
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

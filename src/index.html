@@ -14,10 +14,19 @@
       <h1>Home page</h1>
 
       {{> button text="Submit" type="submit" class="btn--primary"}}
+      {{> button text="Search" type="button" class="btn--primary" icon="search"}}
       {{> button text="Cancel" type="button" class="btn--secondary"}}
 
-      {{> input label="Email" type="email" name="email" placeholder="you@example.com"}}
-      {{> input label="Password" type="password" name="password" placeholder="••••••••"}}
+      {{> input type="email" name="email" placeholder="you@example.com"}}
+      {{> input type="password" name="password" placeholder="Password"}}
+      {{> input type="email" name="email-err" class="is-error" placeholder="you@example.com" error="Invalid email address"}}
+
+      {{> link text="About us" href="/about.html"}}
+      {{> link text="Read more" href="/about.html" icon="arrow-right"}}
+
+      {{> icon-btn name="search"}}
+      {{> icon-btn name="close" href="/about.html"}}
+      {{> icon-btn name="arrow-right" active=true}}
 
       <p>Icons:</p>
       {{> icon name="search" width="24" height="24"}}

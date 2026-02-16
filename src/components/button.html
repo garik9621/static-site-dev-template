@@ -1,1 +1,1 @@
-<button class="btn {{class}}" type="{{type}}">{{text}}</button>
+<button class="btn {{class}}" type="{{type}}">{{#if icon}}<svg class="btn__icon" width="{{#if iconSize}}{{iconSize}}{{else}}16{{/if}}" height="{{#if iconSize}}{{iconSize}}{{else}}16{{/if}}" aria-hidden="true"><use href="#{{icon}}"></use></svg>{{/if}}{{text}}</button>

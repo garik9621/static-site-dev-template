@@ -1,0 +1,36 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #3b82f6;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #2563eb;
+  }
+
+  &:active {
+    color: #1d4ed8;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  &--icon {
+    text-decoration: none;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+
+  &--icon:hover &__icon {
+    transform: translateX(4px);
+  }
+}
